@@ -1,0 +1,2 @@
+/*this is the scripts folder
+This is meaent to be a submodule for all future gmae project to contains scripts and scriptable objects*/
