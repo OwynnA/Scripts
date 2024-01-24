@@ -27,8 +27,6 @@ public class CharController : MonoBehaviour
     {
         //sound = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
         controller = GetComponent<CharacterController>();
-        jumpForce = trueJumpForce;
-        moveSpeed = trueSpeed;
         animator = GetComponent<Animator>();
         //damage = GameObject.FindGameObjectWithTag("damage");
     }
@@ -65,7 +63,7 @@ public class CharController : MonoBehaviour
         // Jumping
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
-            sound.JumpSFX();
+            //sound.JumpSFX();
             velocity.y = Mathf.Sqrt(jumpForce * -2 * gravity);
             animator.SetTrigger("Jump");
         }
