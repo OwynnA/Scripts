@@ -1,2 +1,15 @@
 /*this is the scripts folder
-This is meaent to be a submodule for all future gmae project to contains scripts and scriptable objects*/
+This is meaent to be a submodule for all future gmae project to contains scripts and scriptable objects
+
+This is going to be a table of contents because I will get lost in this repository eventually
+
+Behaviours
+    AgentBehaviour
+    CharController
+    GameAction
+    MonoEventsBehaviour
+    TriggerEventsBehaviour
+
+Pickups
+    bobbing
+*/
