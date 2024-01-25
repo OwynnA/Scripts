@@ -2,16 +2,16 @@ using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(text))]
+[RequireComponent(typeof(Text))]
 
-public class TextLabelBehaviour : Monobehaviour
+public class TextLabelBehaviour : MonoBehaviour
 {
     public Text label;
     public FloatData dataObj;
 
     private void Start()
     {
-        label = GetComponent<text>();
+        label = GetComponent<Text>();
         UpdateLabel();
     }
 
