@@ -7,18 +7,18 @@ public class Vector3Data : ScriptableObject
    public Vector3 value;
    public Vector3 lastPos;
 
-   public class UpdatePosition(Transform obj)
+   public void UpdatePosition(Transform obj)
    {
         lastPos = obj.position;
         value = obj.position;
    }
 
-   public class UpdateValue(Transform obj)
+   public void UpdateValue(Transform obj)
    {
         obj.position = value;
    }
 
-   public class ReturnToLastPos(Transfrom obj)
+   public void ReturnToLastPos(Transform obj)
    {
         obj.position = lastPos;
    }

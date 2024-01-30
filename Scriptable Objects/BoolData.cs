@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class BoolData : ScriptableObject
 {
-    public bool value = False;
+    public bool value = false;
 
-    public class SwitchValue()
+    public void SwitchValue()
     {
         value = !value;
     }
-    public class SetValueTrue()
+    public void SetValueTrue()
     {
-        value = True;
+        value = true;
     }
 
-    public class SetValueFalse()
+    public void SetValueFalse()
     {
-        value = False;
+        value = false;
     }
 }
