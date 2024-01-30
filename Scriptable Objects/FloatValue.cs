@@ -13,7 +13,7 @@ public class FloatData : ScriptableObject
         value += num;
     }
 
-    public void ReplaceValue(float num)
+    public void SetValue(float num)
     {
         value = num;
     }
