@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class TextLabelBehaviour : MonoBehaviour
 {
     public Text label;
-    public FloatData dataObj;
+    public IntData dataObj;
 
     private void Start()
     {
