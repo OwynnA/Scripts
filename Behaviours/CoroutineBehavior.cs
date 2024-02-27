@@ -12,9 +12,17 @@ public class CoroutineBehavior : MonoBehaviour
     public float seconds = 3.0f;
     private WaitForSeconds wfsObj;
     private WaitForFixedUpdate wffuObj;
+
+    public bool CanRun
+    {
+        get => canRun;
+        set => canRun = value;
+    }
     
     public void Start()
     {
+        wfsObj = new WaitForSeconds(seconds);
+        wffuObj = new WaitForFixedUpdate();
         startEvent.Invoke();
     }
     public void StartCounting()
@@ -23,8 +31,6 @@ public class CoroutineBehavior : MonoBehaviour
     }
     IEnumerator Counting()
     {
-        wfsObj = new WaitForSeconds(seconds);
-        wffuObj = new WaitForFixedUpdate();
         startCountEvent.Invoke();
         
         while(counterNum.value > 0)
