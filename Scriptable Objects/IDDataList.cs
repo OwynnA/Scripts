@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu]
+public class IDDataList : ScriptableObject
+{
+    public List<ID> IDList;
+
+    public ID currentID;
+    private int num;
+
+    public void SetCurrentIDRandomly()
+    {
+        num = Random.Range(0, IDList.Count);
+        currentID = IDList[num];
+    }
+}
