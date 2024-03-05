@@ -8,10 +8,13 @@ public class DraggableBehaviour : MonoBehaviour
     public bool draggable;
     private Vector3 position, offset;
     public UnityEvent startDragEvent, endDragEvent;
+    private Rigidbody2D rb;
 
     void Start()
     {
         cameraObj = Camera.main;
+        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     public IEnumerator OnMouseDown()
@@ -23,9 +26,11 @@ public class DraggableBehaviour : MonoBehaviour
 
         while (draggable)
         {
+            rb.gravityScale = 0f;
             yield return new WaitForFixedUpdate();
             position = cameraObj.ScreenToWorldPoint(Input.mousePosition) + offset;
             transform.position = position;
+
         }
     }
 
@@ -33,5 +38,6 @@ public class DraggableBehaviour : MonoBehaviour
     {
         draggable = false;
         endDragEvent.Invoke();
+        rb.gravityScale = 1f;
     }
 }

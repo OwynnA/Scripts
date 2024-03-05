@@ -7,9 +7,11 @@ public class MatchBehaviour : MonoBehaviour
     public ID IDObj;
     public UnityEvent matchEvent, noMatchEvent, noMatchDelayedEvent;
     
-    private IEnumerator OnTriggerEnter(Collider other)
+    private IEnumerator OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("trigger");
         var tempObj = other.GetComponent<IDContainerBehaviour>();
+        Debug.Log(tempObj);
         if(tempObj == null)
         {
             yield break;
